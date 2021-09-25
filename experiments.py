@@ -1,23 +1,10 @@
 import sys
 
-str_split = sys.stdin.read().split(',')
+table_non_parsed, hand_non_parsed = sys.stdin.read().split(',')
 
-current_hand = [int(x) if x.strip().isdigit() else x.strip() for x in str_split]
+table_cards = table_non_parsed.split()
+hand_cards = hand_non_parsed.split()
 
-nums_dict = {
-    2: 1,
-    3: 1,
-    4: 1,
-    5: 1,
-    6: 1,
-    7: 0,
-    8: 0,
-    9: 0,
-    10: -1,
-    'J': -1,
-    'Q': -1,
-    'K': -1,
-    'A': -1,
-}
-result = sum([nums_dict[i] for i in current_hand])
-print(result)
+r = [i[-1] for i in table_cards] + [i[-1] for i in hand_cards]
+res = any([r.count(i)>=5 for i in 'DHCS'])
+print('Flush' if res else 'No Flush')
