@@ -1,4 +1,4 @@
-class access:
+class Access:
     def __init__(self):
         self.public = 'public var'
         self._protected = 'protected var'
@@ -6,7 +6,7 @@ class access:
         self._access__private = None
         self.__private = 'private var'
 
-give = access()
+give = Access()
 print(give.public)
 print(give._protected)
 #  ERROR print(give.__private)
