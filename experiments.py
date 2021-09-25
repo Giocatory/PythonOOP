@@ -1,11 +1,23 @@
-import math
 import sys
 
-x1_str, y1_str, x2_str, y2_str = sys.stdin.read().split()
+str_split = sys.stdin.read().split(',')
 
-x1 = int(x1_str)
-y1 = int(y1_str)
-x2 = int(x2_str)
-y2 = int(y2_str)
+current_hand = [int(x) if x.strip().isdigit() else x.strip() for x in str_split]
 
-print(f"{math.sqrt((x2-x1)**2 + (y2-y1)**2):.2f}")
+nums_dict = {
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: -1,
+    'J': -1,
+    'Q': -1,
+    'K': -1,
+    'A': -1,
+}
+result = sum([nums_dict[i] for i in current_hand])
+print(result)
