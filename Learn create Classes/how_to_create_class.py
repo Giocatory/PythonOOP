@@ -1,10 +1,13 @@
 class Counter:
     def start_from(self, count=0):
         self.counter = count
+
     def increment(self):
         self.counter += 1
+
     def display(self):
         print(f"Текущее значение счетчика = {self.counter}")
+
     def reset(self):
         self.start_from()
 

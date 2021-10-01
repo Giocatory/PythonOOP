@@ -6,6 +6,7 @@
 class Zebra:
     def __init__(self):
         self.count = 0
+
     def which_stripe(self):
         if self.count % 2 == 0:
             print("Полоска белая")

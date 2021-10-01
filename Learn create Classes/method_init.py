@@ -11,5 +11,5 @@ class Laptop:
         self.laptop_name = f"{self.brand} {self.model}"
 
 
-laptop1=Laptop('Asus', '18-bugfix', 37000)
+laptop1 = Laptop('Asus', '18-bugfix', 37000)
 print(laptop1.laptop_name)
