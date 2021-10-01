@@ -33,3 +33,13 @@ print()
 name = input('Enter name: ')
 last = input('Last name: ')
 say(name, last)
+
+# Start decorator
+# Hello World
+# Stop decorator
+#
+# Enter name: Mikhail
+# Last name: Derkunov
+# Start decorator
+# Hello Mikhail Derkunov
+# Stop decorator
