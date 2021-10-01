@@ -20,3 +20,14 @@ square = calc_square(10, 10, 10)  # 43.30127018922193
 print(square)
 # print(square1)
 # print(square2)
+
+
+def is_float(number):
+    if isinstance(number, float):
+        return True
+    else:
+        raise ValueError("Это значение не Float")
+
+
+print(is_float(square))  # True
+print(is_float('df'))  # ValueError: Это значение не Float
