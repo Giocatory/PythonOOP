@@ -16,9 +16,9 @@ say()
 
 
 def show_func2(func):
-    def inner(*args):
+    def inner(*args, **kwargs):
         print('Start decorator')
-        func(*args)
+        func(*args, **kwargs)
         print('Stop decorator')
 
     return inner
