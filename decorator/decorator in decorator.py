@@ -14,6 +14,7 @@ def table(func):
     return inner
 
 
+# title = table(header(title))
 @table
 @header
 def title(author, company, year):
