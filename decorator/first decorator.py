@@ -13,6 +13,9 @@ def say():
 
 
 say()
+# Start decorator
+# Hello World
+# Stop decorator
 
 
 def show_func2(func):
@@ -34,10 +37,7 @@ name = input('Enter name: ')
 last = input('Last name: ')
 say(name, last)
 
-# Start decorator
-# Hello World
-# Stop decorator
-#
+
 # Enter name: Mikhail
 # Last name: Derkunov
 # Start decorator
