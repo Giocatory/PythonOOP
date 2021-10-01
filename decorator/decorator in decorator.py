@@ -21,3 +21,9 @@ def title(author, company, year):
 
 
 title('Mikhail', 'sbkits', '2021')
+
+# <table>
+# <h1>
+# Mikhail - sbkits. 2021 year
+# </h1>
+# </table>
