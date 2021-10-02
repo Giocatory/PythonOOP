@@ -3,8 +3,6 @@ class Access:
         self._Access__private = None
         self.public = 'public var'
         self._protected = 'protected var'
-
-        self._access__private = None
         self.__private = 'private var'
 
     @property
