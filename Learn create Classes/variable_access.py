@@ -1,5 +1,6 @@
 class Access:
     def __init__(self):
+        self._Access__private = None
         self.public = 'public var'
         self._protected = 'protected var'
 
@@ -11,12 +12,12 @@ class Access:
         return self._protected
 
     @property
-    def access__private(self):
-        return self._access__private
+    def Access__private(self):
+        return self._Access__private
 
 
 give = Access()
 print(give.public)
 print(give.protected)
 #  ERROR print(give.__private)
-print(give.access__private)
+print(give.Access__private)
