@@ -14,9 +14,10 @@ class Point:
 
     def get_distance(self, p):
         if type(p) == type(self):
-            return ((self.x - p.x)**2 + (self.y - p.y)**2)**0.5
+            return ((self.x - p.x) ** 2 + (self.y - p.y) ** 2) ** 0.5
         else:
             print('Передана не точка')
+
 
 p1 = Point()
 p2 = Point()

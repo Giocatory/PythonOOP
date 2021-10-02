@@ -7,7 +7,8 @@ class UserMail:
         return self.__email
 
     def set_email(self, email):
-        if list(email).count('@') == 1 and list(email).count('.') == 1 and list(email).index('.') > list(email).index(
+        if list(email).count('@') == 1 and list(email).count('../Learn create Classes') == 1 and list(email).index(
+                '../Learn create Classes') > list(email).index(
                 '@'):
             self.__email = email
         else:
