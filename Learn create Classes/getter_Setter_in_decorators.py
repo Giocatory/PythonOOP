@@ -11,7 +11,7 @@ class Character:
         self.__bonus = bonus
 
     @bonus.getter
-    def get_bonus(self):
+    def __get__(self):
         return self.__bonus
 
 
@@ -19,4 +19,4 @@ ch = Character()
 print(ch.bonus)
 ch.bonus = 1000
 print(ch.bonus)
-print(ch.get_bonus)
+print(ch.__get__)
