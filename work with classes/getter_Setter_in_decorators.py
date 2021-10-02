@@ -16,7 +16,7 @@ class Character:
 
 
 ch = Character()
-print(ch.bonus)
+print(ch.bonus)  # 10
 ch.bonus = 1000
-print(ch.bonus)
-print(ch.__get__)
+print(ch.bonus)  # 1000
+print(ch.__get__)  # 1000
