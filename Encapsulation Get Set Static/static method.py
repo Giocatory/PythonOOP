@@ -19,10 +19,8 @@ class Student:
 
 
 st1 = Student.new_student(12)
-st2 = Student.new_student(13)
-st3 = Student.new_student(55)
-st4 = Student.new_student(102)
-st5 = Student.create_student(75)
+st3 = Student(22)
+st2 = Student.create_student(75)
 
 Student.How_many_class_created()
 st1.How_many_class_created()
