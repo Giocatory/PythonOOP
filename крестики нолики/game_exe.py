@@ -36,6 +36,14 @@ def who_win():
         return False
 
 
+def tie():
+    for i in range(field.rows):
+        for j in range(field.cols):
+            if main_field[i][j] == '.':
+                return False
+    return True
+
+
 while not who_win():
     try:
         # Ходы игрока
@@ -73,5 +81,10 @@ while not who_win():
                     break
         if who_win():
             break
+        else:
+            if tie():
+                print('НИЧЬЯ')
+                break
     except Exception as ex:
         print(f'Не верно что-то ввели ({ex})')
+
