@@ -48,8 +48,8 @@ while not who_win():
     try:
         # Ходы игрока
         print(f"\nХод игрока {player.name_player}")
-        player_row = int(input('Введите номер строки: '))
-        player_col = int(input('Введите номер столбца: '))
+        player_row = int(input('Введите номер строки: ')) - 1
+        player_col = int(input('Введите номер столбца: ')) - 1
         while True:
             if main_field[player_row][player_col] == '.':
                 main_field[player_row][player_col] = 'X'
@@ -81,10 +81,10 @@ while not who_win():
                     break
         if who_win():
             break
-        else:
-            if tie():
-                print('НИЧЬЯ')
-                break
+        if tie():
+            print('НИЧЬЯ')
+            break
     except Exception as ex:
         print(f'Не верно что-то ввели ({ex})')
 
+input()
