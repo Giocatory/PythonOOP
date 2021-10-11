@@ -1,15 +1,44 @@
-import sys
+class Vector:
+    def __init__(self, *args):
+        self.values = []
+        for arg in args:
+            if isinstance(arg, int):
+                self.values.append(arg)
+        self.values.sort()
 
+    def __str__(self):
+        if len(self.values) > 0:
+            return f'Вектор{tuple(self.values)}'
+        return 'Пустой вектор'
 
-def is_full_house(args: list):
-    my_set = set(args)
-    my_list = list(my_set)
-    if len(my_set) == 2 and (args.count(my_list[0]) == 2 or args.count(my_list[0]) == 3) and (args.count(my_list[1]) == 2 or args.count(my_list[1]) == 3):
-        return True
-    else:
-        return False
+    def __add__(self, other):
+        new_v = []
+        if isinstance(other, Vector):
+            if len(self.values) == len(other.values):
+                for i in range(len(self.values)):
+                    new_v.append(self.values[i] + other.values[i])
+                return Vector(*[i for i in new_v])
+            else:
+                print('Сложение векторов разной длины недопустимо')
+        if isinstance(other, int):
+            for i in range(len(self.values)):
+                new_v.append(self.values[i] + other)
+            return Vector(*[i for i in new_v])
+        if not isinstance(other, (Vector, int)):
+            print(f'Вектор нельзя сложить с {other}')
 
-
-lst = ["10", "J", "10", "10", "10"]
-result = is_full_house(lst)
-print(result)
+    def __mul__(self, other):
+        new_v = []
+        if isinstance(other, Vector):
+            if len(self.values) == len(other.values):
+                for i in range(len(self.values)):
+                    new_v.append(self.values[i] * other.values[i])
+                return Vector(*[i for i in new_v])
+            else:
+                print('Умножение векторов разной длины недопустимо')
+        if isinstance(other, int):
+            for i in range(len(self.values)):
+                new_v.append(self.values[i] * other)
+            return Vector(*[i for i in new_v])
+        if not isinstance(other, (Vector, int)):
+            print(f'Вектор нельзя умножать с {other}')
